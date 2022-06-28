@@ -84,7 +84,7 @@ public class GridPrint {
 		}
 	}
 	
-	public boolean checkWinLine(String nickName, String sign, Boolean check) {
+	public boolean checkWin(String nickName, String sign, Boolean check) {
 		for(int i=0; i<3; i++) {
 			if(spotClear[i][0] == spotClear[i][1] && spotClear[i][0] ==spotClear[i][2] && spotClear[i][0] != " ") {
 				check = false;
@@ -92,30 +92,22 @@ public class GridPrint {
 				
 			}
 		}
-		return check;
-	}
-	public boolean checkWinColomn(String nickName, String sign, Boolean check) {
 		for(int i=0; i<3; i++) {
 			if(spotClear[0][i] == spotClear[1][i] && spotClear[0][i] == spotClear[2][i] && spotClear[0][i] != " ") {
 				System.out.println(nickName + ", hai vinto, tris di "+ sign +" nella colonna "+ (i+1) +"!!");
 				check = false;
 			}
 		}
-		return check;
-	}
-	public boolean checkWinDiagonal1(String nickName, String sign, Boolean check) {
 		if (spotClear[0][0] == spotClear[1][1] && spotClear[0][0] == spotClear[2][2] && spotClear[0][0] != " ") {
 			System.out.println(nickName + ", hai vinto, tris di "+ sign +" nella prima diagonale!!");
 			check = false;
 		}
-		return check;
-	}
-	public boolean checkWinDiagonal2(String nickName, String sign, Boolean check) {
 		if (spotClear[2][0] == spotClear[1][1] && spotClear[2][0] == spotClear[0][2] && spotClear[2][0] != " ") {
 			System.out.println(nickName + ", hai vinto, tris di "+ sign +" nella seconda diagonale!!");
 			check = false;
 		}
 		return check;
 	}
+	
 	
 }

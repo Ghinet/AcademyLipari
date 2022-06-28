@@ -28,32 +28,16 @@ public class trisMain {
 			if (round % 2 == 0) {
 				game.handleRound(nickX, "x");	
 				
-				game.checkWinLine(nickX, "x", check);
-				game.checkWinColomn(nickX, "x", check);
-				game.checkWinDiagonal1(nickX, "x", check);
-				game.checkWinDiagonal2(nickX, "x", check);
-				
-				check = game.checkWinLine(nickX, "x", check);
-				check = game.checkWinColomn(nickX, "x", check);
-				check = game.checkWinDiagonal1(nickX, "x", check);
-				check = game.checkWinDiagonal2(nickX, "x", check);
-				
+				check = game.checkWin(nickX, "x", check);
+			
 				round++;
 				
 				
 			} else {
 				game.handleRound(nickO, "o");
 				
-				game.checkWinLine(nickO, "o", check);
-				game.checkWinColomn(nickO, "o", check);
-				game.checkWinDiagonal1(nickO, "o", check); 
-				game.checkWinDiagonal2(nickO, "o", check);
-				
-				check = game.checkWinLine(nickO, "o", check);
-				check = game.checkWinColomn(nickO, "o", check);
-				check = game.checkWinDiagonal1(nickO, "o", check);
-				check = game.checkWinDiagonal2(nickO, "o", check);
-				
+				check = game.checkWin(nickO, "o", check);
+
 				round++;
 				
 			}
